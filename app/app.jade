@@ -1,0 +1,13 @@
+html(lang="en")
+  head  
+
+  != js('https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')  
+  script(src='/batman/es5-shim.js')
+  script(src='/batman/dist/batman.jquery.js')
+  script(src='/batman/extras/batman.rails.js')
+  script(src='https://api.trello.com/1/client.js?key=#{trello_api_key}')
+  != js('bootstrap')
+
+  body
+    div(data-yield="main")
+

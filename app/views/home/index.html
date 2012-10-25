@@ -1,0 +1,17 @@
+<div data-bind="app.controllers.trello.user.fullName"></div>
+<a data-event-click="auth">Authorize</a>
+<a data-event-click="sync">Sync</a>
+
+<div data-bind="List.loaded.length"></div>
+<select data-bind="list_id" data-event-change="select_list">
+  <option data-foreach-list="List.loaded" data-context="list" data-bind-value="id" data-bind="name"></li>
+<select>
+
+<ul>
+  <li data-foreach-task="tasks" data-context="task" data-bind="name"></li>
+</ul>
+
+<form>
+<input data-bind-value="task.name">
+<button data-event-click="create">Create</button>
+</form>
